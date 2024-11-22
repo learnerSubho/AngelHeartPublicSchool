@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Welcome to Angel Heart Public School</title>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <!-- Enhanced Header Section -->
+    <header class="header p-3 bg-gradient border-bottom">
+        <div class="container d-flex justify-content-between align-items-center">
+            <!-- School Logo and Name -->
+            <div class="logo-section d-flex align-items-center">
+                <img src="school-logo.png" alt="School Logo" class="school-logo animated-logo">
+                <div>
+                    <h1 class="school-name mb-0">Angel Heart Public School</h1>
+                    <p class="text-muted mb-0">(Shaping young minds for tomorrow)</p>
+                </div>
+            </div>
+    
+            <!-- Contact Information -->
+            
+        </div>
+        <div class="contact-info d-flex justify-content-center align-items-center">
+            <div class="contact-item d-flex align-items-center">
+                <i class="fa-solid fa-envelope" title="Send Email"></i>
+                <a href="mailto:contact@ahpschool.com">contact@ahpschool.com</a>
+            </div>
+            <div class="separator"></div>
+            <div class="contact-item d-flex align-items-center">
+                <i class="fa-solid fa-phone" title="Call Us"></i>
+                <a href="tel:+11234567890">9883405873</a>
+            </div>
+            <!-- <div class="separator"></div> -->
+            <!-- <div class="contact-item d-flex align-items-center">
+                <i class="fa-brands fa-whatsapp" title="Chat on WhatsApp"></i>
+                <a href="https://wa.me/19876543210" target="_blank">+1-987-654-3210</a>
+            </div> -->
+        </div>
+        
+        
+    </header>
+    
+        <!-- Navbar Section -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav w-100 d-flex justify-content-between">
+                        <li class="nav-item flex-grow-1 text-center"><a class="nav-link" href="index.html"><i class="fa-solid fa-house"></i>Home</a></li>
+                        <li class="nav-item flex-grow-1 text-center"><a class="nav-link" href="about.html"><i class="fa-solid fa-address-card"></i>About</a></li>
+                        <li class="nav-item flex-grow-1 text-center"><a class="nav-link" href="#staff-login"><i class="fa-solid fa-user-tie"></i>Staff Login</a>
+                        </li>
+                        <li class="nav-item flex-grow-1 text-center"><a class="nav-link" href="#admin-login"><i class="fa-solid fa-user" style="size: 3rem;"></i>Admin Login</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    <div class="attendance-container container my-5">
+        <h2 class="text-center mb-4">Class Attendance</h2>
+
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+            }
+
+            .attendance-container {
+                padding: 20px;
+            }
+
+            .attendance-table th,
+            .attendance-table td {
+                text-align: center;
+            }
+
+            .clickable {
+                cursor: pointer;
+                text-decoration: underline;
+                color: rgb(11, 11, 240);
+                transition: color 0.3s ease;
+            }
+
+            .clickable:hover {
+                color: rgb(228, 24, 24);
+            }
+
+            .animated-button {
+                transition: transform 0.3s ease;
+            }
+
+            .animated-button:hover {
+                transform: scale(1.1);
+            }
+
+            .btn-secondary {
+                background-color: #240eec;
+            }
+
+            .btn-secondary:hover {
+                background-color: #0400ff91;
+            }
+
+            .list-group-item {
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+            }
+
+            .list-group-item:hover {
+                background-color: #18c521;
+            }
+
+            .badge {
+                font-size: 1rem;
+            }
+
+            .table-success{
+                background-color: #18c521;
+            }
+            .table-danger{
+                background-color: red;
+            }
+            .progress-container {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+            }
+        
+            .progress-bar {
+                width: 100%;
+                height: 20px;
+                background-color: #e0e0e0;
+                border-radius: 10px;
+                overflow: hidden;
+                position: relative;
+            }
+        
+            .progress-bar-fill {
+                height: 100%;
+                background-color: #4caf50;
+                width: 0%;
+                transition: width 1s ease-in-out;
+            }
+        
+            .progress-percentage {
+                min-width: 40px;
+                text-align: center;
+                font-weight: bold;
+            }
+            /* Style for rows where the student is present today */
+     .table-success {
+    background-color: #d4edda !important; /* Light green background */
+    color: #155724; /* Dark green text */
+       }
+
+/* Style for rows where the student is absent today */
+     .table-danger {
+    background-color: #f8d7da !important; /* Light red background */
+    color: #721c24; /* Dark red text */
+      }
+
+        </style>
+
+        <!-- Step 1: Display Classes -->
+        <div id="classView">
+            <h3>Select a Class</h3>
+            <div class="d-flex flex-column align-items-center">
+                <button class="btn btn-primary mb-3 animated-button" onclick="showSections('Class 1')">Class 1</button>
+                <button class="btn btn-primary mb-3 animated-button" onclick="showSections('Class 2')">Class 2</button>
+                <button class="btn btn-primary mb-3 animated-button" onclick="showSections('Class 3')">Class 3</button>
+                <button class="btn btn-primary mb-3 animated-button" onclick="showSections('Class 4')">Class 4</button>
+                <button class="btn btn-primary mb-3 animated-button" onclick="showSections('Class 5')">Class 5</button>
+            
+            </div>
+        </div>
+
+        <!-- Step 2: Display Sections -->
+        <div id="sectionView" class="d-none">
+            <h3 id="selectedClass"></h3>
+            <h4>Select a Section</h4>
+            <div class="d-flex flex-column align-items-center">
+                <button class="btn btn-secondary mb-3 animated-button" onclick="showStudents('Section A')">Section A</button>
+                <button class="btn btn-secondary mb-3 animated-button" onclick="showStudents('Section B')">Section B</button>
+            </div>
+            <button class="btn btn-secondary mt-3" onclick="goBackToClasses()">Back to Classes</button>
+        </div>
+
+        <!-- Step 3: Display Students and Attendance in Table -->
+   <!-- Step 3: Display Students and Attendance in Table -->
+<div id="studentAttendanceView" class="d-none">
+    <h3 id="selectedSection"></h3>
+    <h4>Attendance for Students</h4>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Student Name</th>
+                <th>Date</th>
+                <th>Status</th>
+                <th>Progress</th> <!-- New Progress Column -->
+            </tr>
+        </thead>
+        <tbody id="attendanceTable"></tbody>
+    </table>
+    <button class="btn btn-secondary mt-3" onclick="goBackToSection()">Back to Sections</button>
+</div>
+
+        </div>
+
+    </div>
+<script>
+    <!-- JavaScript Section -->
+    // Student Data and Attendance Records
+    const studentData = {
+        "Class 10": {
+            "Section A": ["John Doe", "Jane Smith"],
+            "Section B": ["Alice Johnson", "Bob Brown"]
+        },
+        "Class 11": {
+            "Section A": ["Charlie Davis", "Eve Adams"],
+            "Section B": ["Frank Wright", "Grace Hall"]
+        },
+        "Class 12": {
+            "Section A": ["Hannah Lee", "Ian Scott"],
+            "Section B": ["Jack White", "Kara Black"]
+        }
+    };
+
+    // Attendance records with status for each student
+    const attendanceRecords = {
+        "John Doe": [
+            { date: "2024-11-01", status: "Present" },
+            { date: "2024-11-22", status: "Present" },
+             // Today's date
+        ],
+        "Jane Smith": [
+            { date: "2024-11-01", status: "Present" },
+            { date: "2024-11-22", status: "Absent" } // Today's date
+        ]
+    };
+
+    // 1. Show Sections based on class selection
+    function showSections(className) {
+        document.getElementById("classView").classList.add("d-none");
+        document.getElementById("sectionView").classList.remove("d-none");
+        document.getElementById("selectedClass").innerText = `Selected Class: ${className}`;
+    }
+
+    // 2. Go back to Class Selection
+    function goBackToClasses() {
+        document.getElementById("sectionView").classList.add("d-none");
+        document.getElementById("classView").classList.remove("d-none");
+    }
+
+    // 3. Show students and their attendance with progress
+    function showStudents(sectionName) {
+        document.getElementById("sectionView").classList.add("d-none");
+        document.getElementById("studentAttendanceView").classList.remove("d-none");
+        document.getElementById("selectedSection").innerText = `Selected Section: ${sectionName}`;
+
+        const attendanceTable = document.getElementById("attendanceTable");
+        attendanceTable.innerHTML = "";
+
+        const todayDate = new Date().toISOString().split("T")[0]; // Get today's date in YYYY-MM-DD format
+
+        // Fetch students and their attendance records
+        const students = studentData["Class 10"][sectionName]; // Adjust class dynamically if needed
+        students.forEach(student => {
+            const records = attendanceRecords[student] || [];
+            const totalDays = records.length;
+            const presentDays = records.filter(record => record.status.toLowerCase() === "present").length;
+
+            const attendancePercentage = totalDays > 0 ? (presentDays / totalDays) * 100 : 0;
+
+           
+      // Check if the student is present today
+const todayRecord = records.find(record => record.date === todayDate);
+const todayStatus = todayRecord ? todayRecord.status : "Absent";
+
+// Set row background color based on today's status
+const rowClass = todayStatus === "Present" ? "table-success" : "table-danger";
+
+            let statuscolor;
+            if(todayStatus=="table-success") {
+                statuscolor = "green";
+            }
+            else{
+                statuscolor="Red";
+            }
+            // Set progress bar color based on attendance percentage
+            let progressColor;
+            if (attendancePercentage < 49) {
+                progressColor = "blue";
+            } else if (attendancePercentage >= 50 && attendancePercentage < 75) {
+                progressColor = "red";
+            } else {
+                progressColor = "orange";
+            }
+
+            // Add a row for the student's attendance record
+            const row = document.createElement("tr");
+            row.innerHTML = `
+                <td>${student}</td>
+                <td>${todayDate}</td>
+                <td>${todayStatus}</td> <!-- Show today's attendance status -->
+                <td>
+                    <div class="progress" style="height: 20px; background-color: #f1f1f1;">
+                        <div class="progress-bar" role="progressbar"
+                            style="width: ${attendancePercentage}%; background-color: ${progressColor};"
+                            aria-valuenow="${attendancePercentage}" 
+                            aria-valuemin="0" aria-valuemax="100">
+                            ${attendancePercentage.toFixed(1)}%
+                        </div>
+                    </div>
+                </td>
+            `;
+            attendanceTable.appendChild(row);
+               // Get the status element and update its style based on attendance
+        const statusElement = document.getElementById(`attendance-status-${student}`);
+        if (todayStatus === "Present") {
+            statusElement.classList.add("badge-present");
+            statusElement.classList.remove("badge-absent");
+        } else {
+            statusElement.classList.add("badge-absent");
+            statusElement.classList.remove("badge-present");
+        }
+        });
+    }
+
+    // 4. Go back to section selection
+    function goBackToSection() {
+        document.getElementById("studentAttendanceView").classList.add("d-none");
+        document.getElementById("sectionView").classList.remove("d-none");
+    }
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Footer Section -->
+    <footer class="footer bg-dark text-white text-center py-3">
+        <p>&copy; 2024 Angel Heart Public School | All rights reserved</p>
+        <p>Designed by <a href="https://soumya-xd.github.io/ds/#" class="text-decoration-none text-info">RedAlpha Tech Private Limited</a></p>
+    </footer>
+</body>
+
+</html>
+
